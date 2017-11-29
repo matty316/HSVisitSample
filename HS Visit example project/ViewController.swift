@@ -12,14 +12,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.navigationController?.navigationBar.prefersLargeTitles = true
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func buttonTapped(_ sender: Any) {
+        let alert = UIAlertController(title: "IBActions", message: "IBActions allow you to run code when a user taps a button", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        self.present(alert, animated: true)
     }
-
-
 }
 
